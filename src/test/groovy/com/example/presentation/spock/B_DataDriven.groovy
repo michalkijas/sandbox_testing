@@ -5,7 +5,9 @@ import spock.lang.Unroll
 
 class B_DataDriven extends Specification {
 
-    // 1. https://spockframework.org/spock/docs/2.0/data_driven_testing.html#data-tables
+    /**
+     * 1. https://spockframework.org/spock/docs/2.1/data_driven_testing.html#data-tables
+     */
     def "should be equal values from 1 column table"() {
         expect:
             value == 11
