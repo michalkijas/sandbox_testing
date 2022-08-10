@@ -3,7 +3,7 @@ package com.example.presentation.spock
 import spock.lang.Specification
 
 /**
- * https://spockframework.org/spock/docs/2.0/spock_primer.html
+ * https://spockframework.org/spock/docs/2.1/spock_primer.html
  */
 class A_FirstSpecification extends Specification {
 

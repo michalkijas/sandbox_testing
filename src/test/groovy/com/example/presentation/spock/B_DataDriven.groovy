@@ -1,5 +1,6 @@
 package com.example.presentation.spock
 
+import spock.lang.Rollup
 import spock.lang.Specification
 import spock.lang.Unroll
 
@@ -15,9 +16,12 @@ class B_DataDriven extends Specification {
         where:
             value || expected
             11    || _
+            12    || _
+            13    || _
     }
 
     @Unroll
+    // by default add DataDriven specifications are Unroll
     def "should be #value equal values from table #expected"() {
         expect:
             value == expected
@@ -29,8 +33,32 @@ class B_DataDriven extends Specification {
             13    || 13
     }
 
-    @Unroll
-    def "should do the math: #a + #b = #c - from table dataset"() {
+    @Rollup
+    def "should 'value' be  equal values from table"() {
+        expect:
+            value == expected
+
+        where:
+            value || expected
+            11    || 11
+            12    || 12
+            13    || 13
+    }
+
+    @Unroll("should be #value equal values from table #expected")
+    def "equal values"() {
+        expect:
+            value == expected
+
+        where:
+            value || expected
+            11    || 11
+            12    || 12
+            13    || 13
+    }
+
+    @Unroll("should do the math: #a + #b = #c - from table dataset")
+    def "use data from table as a input"() {
         expect:
             a + b == c
 
@@ -41,8 +69,8 @@ class B_DataDriven extends Specification {
             13 | 2 || 15
     }
 
-    @Unroll
-    def "should do the math: #a + #b = #c - from collection"() {
+    @Unroll("should do the math: #a + #b = #c - from collection")
+    def "use collection as a input data"() {
         expect:
             a + b == c
 

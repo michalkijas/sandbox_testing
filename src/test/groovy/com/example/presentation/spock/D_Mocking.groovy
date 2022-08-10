@@ -4,7 +4,7 @@ package com.example.presentation.spock
 import spock.lang.Specification
 
 /**
- * https://spockframework.org/spock/docs/2.0/interaction_based_testing.html
+ * https://spockframework.org/spock/docs/2.1/interaction_based_testing.html
  */
 class D_Mocking extends Specification {
 
@@ -26,11 +26,11 @@ class D_Mocking extends Specification {
     }
 
     /**
-     * https://spockframework.org/spock/docs/2.0/interaction_based_testing.html#_mocking
+     * https://spockframework.org/spock/docs/2.1/interaction_based_testing.html#_mocking
      * Mocking is the act of describing (mandatory) interactions between the object under specification
      * and its collaborators.
      */
-    def "should values from table be equals to result from MOCK service"() {
+    def "should values from table be equals to result from MOCK"() {
         given:
             def sut = Mock(Calculator)
 
@@ -49,7 +49,7 @@ class D_Mocking extends Specification {
     }
 
     /**
-     * https://spockframework.org/spock/docs/2.0/interaction_based_testing.html#_stubbing
+     * https://spockframework.org/spock/docs/2.1/interaction_based_testing.html#_stubbing
      * Stubbing is the act of making collaborators respond to method calls in a certain way.
      * When stubbing a method, you don’t care if and how many times the method is going to be called;
      * you just want it to return some value, or perform some side effect, whenever it gets called.
