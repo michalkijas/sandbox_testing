@@ -1,6 +1,6 @@
 package com.example.spring.presentation
 
-import Specification
+import spock.lang.Specification
 
 class A_FulApplicationContext extends Specification {
 
