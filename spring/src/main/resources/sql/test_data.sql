@@ -1,0 +1,1 @@
+INSERT INTO books (id, author, title) VALUES ('1', 'Alan Alexander Milne', 'Winnie the Pooh')

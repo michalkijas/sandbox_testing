@@ -1,0 +1,17 @@
+#spring:
+#  datasource:
+#    url: jdbc:h2:mem:mydb
+#    username: sa
+#    password: sa
+#    driverClassName: org.h2.Driver
+#  jpa:
+##    defer-datasource-initialization: true
+#    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+#
+#
+##Hibernate Configuration
+#hibernate.dialect: org.hibernate.dialect.H2Dialect
+#hibernate.hbm2ddl.auto: create-drop
+#hibernate.ejb.naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
+#hibernate.show_sql: false
+#hibernate.format_sql: true
