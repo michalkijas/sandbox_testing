@@ -9,7 +9,7 @@ import org.springframework.test.context.ContextConfiguration
 
 @AutoConfigureDataJpa
 @ContextConfiguration(classes = BooksConfiguration)
-class B_Configuration_Spec extends TestBaseSpec {
+class K_Configuration_Spec extends TestBaseSpec {
 
     @Autowired
     private BookService bookService

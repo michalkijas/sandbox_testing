@@ -15,4 +15,9 @@ class BooksConfiguration {
         return new BookService(bookRepository);
     }
 
+    @Bean
+    BookStoreService bookStoreService(BookService bookService) {
+        return new OnlineBookStoreService(bookService);
+    }
+
 }
